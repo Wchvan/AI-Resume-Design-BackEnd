@@ -6,6 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { DATABASE_URL } from './config';
+import { AiModule } from './ai/ai.module';
 
 @Module({
   controllers: [AppController],
@@ -15,6 +16,7 @@ import { DATABASE_URL } from './config';
     UserModule,
     MongooseModule.forRoot(DATABASE_URL),
     AuthModule,
+    AiModule,
   ],
 })
 export class AppModule {}
